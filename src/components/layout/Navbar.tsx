@@ -31,12 +31,12 @@ export function Navbar() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 w-[95%] max-w-7xl rounded-[40px] px-6 py-4 flex items-center justify-between ${
+      className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 w-[95%] max-w-7xl rounded-[40px] px-8 py-6 flex items-center justify-between ${
         scrolled ? "bg-background/90 backdrop-blur-md shadow-soft" : "bg-transparent"
       }`}
     >
-      <div className="flex items-center gap-3">
-        <div className="relative w-10 h-10 overflow-hidden rounded-xl">
+      <div className="flex items-center gap-4">
+        <div className="relative w-12 h-12 overflow-hidden rounded-xl">
           <Image 
             src="/images/favicon.ico" 
             alt="QuickV Logo" 
@@ -44,7 +44,7 @@ export function Navbar() {
             className="object-contain"
           />
         </div>
-        <span className="font-headline font-bold text-2xl tracking-tight">QuickV</span>
+        <span className="font-headline font-bold text-4xl tracking-tight">QuickV</span>
       </div>
 
       <div className="hidden lg:flex items-center gap-8">
@@ -52,7 +52,7 @@ export function Navbar() {
           <Link
             key={link.label}
             href={link.href}
-            className="font-subheading text-sm font-medium hover:text-peach transition-colors relative group"
+            className="font-subheading text-lg font-bold hover:text-peach transition-colors relative group uppercase tracking-wide"
           >
             {link.label}
             <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-peach transition-all group-hover:w-full rounded-full"></span>
@@ -64,8 +64,8 @@ export function Navbar() {
         <Button 
           href="#contact" 
           variant="outline" 
-          size="sm" 
-          className="hidden md:inline-flex border-2 rounded-full px-6 h-10 hover:bg-foreground hover:text-background transition-all shadow-none"
+          size="md" 
+          className="hidden md:inline-flex border-2 rounded-full px-10 h-14 hover:bg-foreground hover:text-background transition-all shadow-none font-black text-lg uppercase tracking-tight"
         >
           Contact Us
         </Button>
